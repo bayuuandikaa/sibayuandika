@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <link rel="icon" type="image/svg+xml" href="img/Group 9 (3).svg"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title class="text-sm">Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body class="font-poppins">
+    <!-- start: Sidebar -->
+    <div class="fixed left-0 top-0 w-52 h-full bg-black p-4 z-50 sidebar-menu transition-transform">
+        <a href="#" class=" ml-4 gap-2">
+            <img src="img/MUSCLEHUB.png" alt="" class=" w-40" >
+        </a>
+        <ul class="mt-4 space-y-3">
+            <li class="mb-1 group active rounded-lg mt-2">
+                <a href="index.html" class="flex items-center py-2 px-4 rounded-2xl ">
+                    <i class="fa-solid fa-house mr-3 text-lg text-black"></i>
+                    <span class="text-[15px] font-semibold text-black">Home Page</span>
+                </a>
+            </li>
+            <li class="mb-1 group hover:bg-secondary rounded-lg">
+                <a href="teacher.html" class="flex items-center py-2 px-4 text-white rounded-2xl ">
+                    <i class="fa-solid fa-user-tie mr-3 text-lg"></i>
+                    <span class="text-[15px] font-medium">Accounts</span>
+                </a>
+            </li>
+            <li class="mb-1 group hover:bg-secondary rounded-lg">
+                <a href="" class="flex items-center py-2 px-4 text-white rounded-2xl ">
+                    <i class="fa-solid fa-building-columns mr-3 text-lg"></i>
+                    <span class="text-[15px] font-medium">Transaction</span>
+                </a>
+            </li>
+            <li class="mb-1 group hover:bg-secondary rounded-lg">
+                <a href="" class="flex items-center py-2 px-4 text-white rounded-2xl ">
+                    <i class="fa-solid fa-building-columns mr-3 text-lg"></i>
+                    <span class="text-[15px] font-medium">Report</span>
+                </a>
+            </li>
+            <li class="mb-1 group hover:bg-secondary rounded-lg">
+                <a href="" class="flex items-center py-2 px-4 text-white rounded-2xl ">
+                    <i class="fa-solid fa-building-columns mr-3 text-lg"></i>
+                    <span class="text-[15px] font-medium">Expenses</span>
+                </a>
+            </li>
+            <li class="mb-1 group hover:bg-secondary rounded-lg">
+                <a href="" class="flex items-center py-2 px-4 text-white rounded-2xl ">
+                    <i class="fa-solid fa-building-columns mr-3 text-lg"></i>
+                    <span class="text-[15px] font-medium">Notification</span>
+                </a>
+            </li>
+            <li class="mb-1 group hover:bg-secondary rounded-lg">
+                <a href="" class="flex items-center py-2 px-4 text-white rounded-2xl ">
+                    <i class="fa-solid fa-building-columns mr-3 text-lg"></i>
+                    <span class="text-[15px] font-medium">Message </span>
+                </a>
+            </li>
+            <li class="mb-1 group hover:bg-secondary rounded-lg">
+                <a href="" class="flex items-center py-2 px-4 text-white rounded-2xl ">
+                    <i class="fa-solid fa-building-columns mr-3 text-lg"></i>
+                    <span class="text-[15px] font-medium">Suports</span>
+                </a>
+            </li>
+            <li class="mb-1 group hover:bg-secondary rounded-lg">
+                <a href="" class="flex items-center py-2 px-4 text-white rounded-2xl ">
+                    <i class="fa-solid fa-building-columns mr-3 text-lg"></i>
+                    <span class="text-[15px] font-medium">Setting</span>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+    <div class="fixed top-0 left-0 w-full h-full bg-black/50 z-40 xl:hidden sidebar-overlay"></div>
+    <!-- end: Sidebar -->
+
+    <!-- start main -->
+    <main class="w-full xl:w-[calc(100%-208px)]  xl:ml-52  transition-all main">
+        <div class="py-2 px-6 bg-[#191919] flex gap-4 items-center top-0 left-0 z-30">
+            <div class="flex gap-2">
+                <button type="button" class="text-lg text-gray-600 sidebar-toggle">
+                    <i class="ri-menu-line text-third "></i>
+                </button>
+            </div>
+            <ul class="ml-auto flex items-center gap-2">
+                <li class="dropdown">
+                </li>
+                <div class="flex gap-3">
+                    <img class="w-8 h-8 rounded-full mt-[5px]" src="img/dashboard-1.png" alt="">
+                    <div class="">
+                        <h1 class="text-white font-medium">Guest</h1>
+                        <p class="text-xs text-third">Guest@gmail</p>
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <div class="p-6 items-stretch gap-4 bg-[#191919] ">
+            <div class="grid lg:grid-cols-12 gap-5">
+                <div class="col-span-12">
+                    <div class="grid lg:grid-cols-3 gap-5">
+                        <div class="bg-black rounded-3xl shadow-lg w-full border-[1.5px] border-[#D7FC01]">
+                            <div class="flex justify-between">
+                                <div class="pl-8">
+                                    <h1 class="text-white pt-10">Total Trainers</h1>
+                                    <h1 class="font-bold text-3xl text-white pt-5">25.000</h1>
+                                </div>
+                                <img class="w-28 pt-[80px]" src="img/Mask group.png" alt="">
+                            </div>
+                        </div>
+                        <div class="bg-black rounded-3xl shadow-lg w-full">
+                            <div class="flex justify-between">
+                                <div class="pl-8">
+                                    <h1 class="text-white pt-10">Total Members</h1>
+                                    <h1 class="font-bold text-3xl text-white pt-5">65.000</h1>
+                                </div>
+                                <img class="w-24 pt-[55px]" src="img/Member1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="bg-black rounded-3xl shadow-lg w-full">
+                            <div class="flex justify-between">
+                                <div class="pl-8">
+                                    <h1 class="text-white pt-10">Total Gym Equipment</h1>
+                                    <h1 class="font-bold text-3xl text-white pt-5">10.000</h1>
+                                </div>
+                                <img class="w-36 pt-[60px]" src="img/Gym_equip.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4 w-full">
+                        <!-- Chart Batang (Transaction Report) -->
+                        <div class="card mt-5 flex-1 min-w-[300px] max-w-[68%]">
+                          <div class="flex justify-between">
+                            <div>
+                              <h1 class="paragraf">Transaction Report</h1>
+                              <p class="paragraf-text">Transaction Report graph</p>
+                            </div>
+                            <button class="border-[1.5px] border-third rounded-full px-3 text-white py-1 mt-3 mb-3">
+                              Monthly <span><i class="ri-arrow-down-s-line"></i></span>
+                            </button>
+                          </div>
+                          <div id="chart-container">
+                            <div id="chart" class="w-full"></div>
+                          </div>
+                        </div>
+                      
+                        <!-- Chart Donat (Expenses) -->
+                        <div class="card mt-5 w-[35%] min-w-[250px]">
+                          <div class="flex justify-between">
+                            <div>
+                              <h1 class="paragraf">Expenses</h1>
+                            </div>
+                            <button class="border-[1.5px] border-third rounded-full px-3 text-white py-1 mb-3">
+                              Monthly <span><i class="ri-arrow-down-s-line"></i></span>
+                            </button>
+                          </div>
+                          <div id="chart-container2">
+                            <div id="chart2" class="w-full"></div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    <div class="card mt-5 overflow-x-auto ">
+                        <table class="w-full my-5 min-w-max ">
+                            <thead>
+                                <h1 class="paragraf mt-2 mx-3 py-4">Member Transaction Record</h1>
+                                <tr>
+                                    <th class="px-3 py-1 text-left text-white font-semibold">Members</th>
+                                    <th class="px-3 py-1 text-left text-white font-semibold">Selected Plan</th>
+                                    <th class="px-3 py-1 text-left text-white font-semibold">Selected Trainer</th>
+                                    <th class="px-3 py-1 text-left text-white font-semibold">Date</th>
+                                    <th class="px-3 py-1 text-left text-white font-semibold">Status</th>
+                                    <th class="px-3 py-1 text-left text-white font-semibold">Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="">
+                                <th>
+                                  <div  class="flex gap-2 mt-4">
+                                    <div class="rounded-full px-3 py-2.5 mt-2 bg-white w-10"><img class="w-7 h-5" src="img/user_profile.png" alt=""></div>
+                                        <h3 class="paragraf-text text-[#777] mt-4">Joseph Muliawan</h3>
+                                  </div>
+                                </th>
+                                <th class="text-left pl-3">
+                                  <h3 class="paragraf-text text-[#777] mt-2">Basic Plan</h3>
+                                </th>
+                                <th class="text-left pl-3">
+                                  <h3 class="paragraf-text text-[#777] mt-2">Courtney Henry</h3>
+                                </th>
+                                <th class="text-left pl-3">
+                                  <h3 class="paragraf-text text-[#777] mt-2">Dec 12,2025</h3>
+                                </th>
+                                <th class="text-left pl-3">
+                                  <h3 class="font-medium text-[#D7FC01] mt-2">Success</h3>
+                                </th>
+                                <th class="text-left pl-3">
+                                    <h3 class="paragraf-text text-[#777] mt-2">5 min ago</h3>
+                                  </th>
+                              </tr>
+
+                              <tr class="">
+                                <th>
+                                  <div  class="flex gap-2 mt-4">
+                                    <div class="rounded-full px-3 py-2.5 mt-2 bg-white w-10"><img class="w-7 h-5" src="img/user_profile.png" alt=""></div>
+                                        <h3 class="paragraf-text text-[#777] mt-4">Joseph Muliawan</h3>
+                                  </div>
+                                </th>
+                                <th class="text-left pl-3">
+                                  <h3 class="paragraf-text text-[#777] mt-2">Basic Plan</h3>
+                                </th>
+                                <th class="text-left pl-3">
+                                  <h3 class="paragraf-text text-[#777] mt-2">Courtney Henry</h3>
+                                </th>
+                                <th class="text-left pl-3">
+                                  <h3 class="paragraf-text text-[#777] mt-2">Dec 12,2025</h3>
+                                </th>
+                                <th class="text-left pl-3">
+                                  <h3 class="font-medium text-[#444] mt-2">Pending</h3>
+                                </th>
+                                <th class="text-left pl-3">
+                                    <h3 class="paragraf-text text-[#777] mt-2">5 min ago</h3>
+                                  </th>
+                              </tr>
+                            </tbody>
+                           </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="Js/script.js"></script>
+</body>
+</html>
