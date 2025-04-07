@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <link rel="icon" type="image/svg+xml" href="img/Group 9 (3).svg"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title class="text-sm">Payout</title>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body class="font-poppins bg-background">
+<!-- start: Sidebar -->
+<div class="fixed left-0 top-0 w-52 h-full bg-gradient-to-b from-blue-950 via-black to-black  p-4 z-50 sidebar-menu transition-transform">
+    <a href="#" class=" ml-4  gap-2">
+        <img src="img/logo.png" alt="" class=" w-40  ">
+    </a>
+    <ul class="mt-4 space-y-3">
+        <li class="mb-1 group hover:bg-secondary rounded-lg mt-2">
+            <a href="index.html" class="flex items-center py-2 px-4 text-white rounded-2xl ">
+                <i class="fa-solid fa-house mr-3 text-lg"></i>
+                <span class="text-[15px] font-medium">Home Page</span>
+            </a>
+        </li>
+        <li class="mb-1 group  active rounded-lg">
+            <a href="teacher.html" class="flex items-center py-2 px-4 text-white rounded-2xl ">
+                <i class="fa-solid fa-user-tie mr-3 text-lg"></i>
+                <span class="text-[15px] font-medium">Accounts</span>
+            </a>
+        </li>
+        <li class="mb-1 group hover:bg-secondary rounded-lg">
+            <a href="" class="flex items-center py-2 px-4 text-white rounded-2xl ">
+                <i class="fa-solid fa-building-columns mr-3 text-lg"></i>
+                <span class="text-[15px] font-medium">Transaction</span>
+            </a>
+        </li>
+        <li class="mb-1 group hover:bg-secondary rounded-lg">
+            <a href="" class="flex items-center py-2 px-4 text-white rounded-2xl ">
+                <i class="fa-solid fa-building-columns mr-3 text-lg"></i>
+                <span class="text-[15px] font-medium">Report</span>
+            </a>
+        </li>
+        <li class="mb-1 group hover:bg-secondary rounded-lg">
+            <a href="" class="flex items-center py-2 px-4 text-white rounded-2xl ">
+                <i class="fa-solid fa-building-columns mr-3 text-lg"></i>
+                <span class="text-[15px] font-medium">Expenses</span>
+            </a>
+        </li>
+        <li class="mb-1 group hover:bg-secondary rounded-lg">
+            <a href="" class="flex items-center py-2 px-4 text-white rounded-2xl ">
+                <i class="fa-solid fa-building-columns mr-3 text-lg"></i>
+                <span class="text-[15px] font-medium">Notification</span>
+            </a>
+        </li>
+        <li class="mb-1 group hover:bg-secondary rounded-lg">
+            <a href="" class="flex items-center py-2 px-4 text-white rounded-2xl ">
+                <i class="fa-solid fa-building-columns mr-3 text-lg"></i>
+                <span class="text-[15px] font-medium">Message </span>
+            </a>
+        </li>
+        <li class="mb-1 group hover:bg-secondary rounded-lg">
+            <a href="" class="flex items-center py-2 px-4 text-white rounded-2xl ">
+                <i class="fa-solid fa-building-columns mr-3 text-lg"></i>
+                <span class="text-[15px] font-medium">Suports</span>
+            </a>
+        </li>
+        <li class="mb-1 group hover:bg-secondary rounded-lg">
+            <a href="" class="flex items-center py-2 px-4 text-white rounded-2xl ">
+                <i class="fa-solid fa-building-columns mr-3 text-lg"></i>
+                <span class="text-[15px] font-medium">Setting</span>
+            </a>
+        </li>
+
+    </ul>
+</div>
+<div class="fixed top-0 left-0 w-full h-full bg-black/50 z-40 xl:hidden sidebar-overlay"></div>
+<!-- end: Sidebar -->
+    <!-- start main -->
+    <main class="w-full xl:w-[calc(100%-208px)]  xl:ml-52 bg-fourth  transition-all main">
+        <div class="py-2 px-6 bg-background flex gap-4 items-center top-0 left-0 z-30">
+            <div class="flex gap-2">
+                <button type="button" class="text-lg text-gray-600 sidebar-toggle">
+                    <i class="ri-menu-line text-third "></i>
+                </button>
+                <div class="relative w-full"> 
+                    <i class="ri-search-line text-gray-400 text-[20px] absolute top-1/2 left-3 -translate-y-1/2"></i>
+                    <input type="text" class="input-penyewaan w-32 pl-10" placeholder="Search"> 
+                </div> 
+            </div>
+           
+            <ul class="ml-auto flex items-center gap-2">
+                <li class="dropdown">
+                    <button class="text-lg text-white">
+                        <i class="ri-notification-3-line"></i>
+                    </button>
+                </li>
+                <div class="flex gap-3">
+                    <img class="w-8 h-8 rounded-full mt-[5px]" src="img/dashboard-1.png" alt="">
+                    <div class="">
+                        <h1 class="paragraf-text text-white font-medium">Putri rai</h1>
+                        <p class="text-xs text-third">Putrirai@gmail</p>
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <div class="p-6 items-stretch gap-4 bg-background ">
+            <div class="card p-6  ">
+                <div class="lg:flex justify-between">
+                   <div class="flex gap-2">
+                    <h1 class="title-user">View Accont</h1>
+                   </div>
+                </div>
+                  <div class="grid lg:grid-cols-2 md:grid-cols-2 gap-5 mt-10">
+                    <div class=" ">
+                        <h1 class="text-third mb-2 font-medium text-[16px]">First Name</h1>
+                        <p class="border border-gray-200 rounded-lg p-3 px-3 py-2 w-full text-white">Putri Inggris</p>
+                     </div>
+                     <div class=" ">
+                        <h1 class="text-third mb-2 font-medium text-[16px]">Bank</h1>
+                        <p class="border border-gray-200 rounded-lg p-3 px-3 py-2 w-full text-white">Chase bank</p>
+                     </div>
+                     <div class=" ">
+                        <h1 class="text-third mb-2 font-medium text-[16px]">Account</h1>
+                        <p class="border border-gray-200 rounded-lg p-3 px-3 py-2 w-full text-white">4878 9847 8364</p>
+                     </div>
+                     <div class="">
+                        <label for="category" class="text-white mb-2 font-medium text-[16px]">Status</label>
+                        <select id="category" class="border border-gray-200 bg-transparent focus:text-white focus:ring-0 text-white focus:outline-none rounded-lg p-3 px-3 py-2 w-full mt-2">
+                            <option selected="">Verified</option>
+                            <option value="FD">Pending</option>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="border border-primary rounded-lg p-5 w-32 h-32 mt-5 flex justify-center items-center">
+                    <img src="img/dashboard-1.png" alt="">
+                  </div>
+                  <div class="flex gap-2 mt-5">
+                    <a href="teacher.html"><button class="border border-gray-200 bg-transparent rounded-lg  px-3 py-1.5 text-gray-500"> Cancel</button></a>
+                </div>
+                </div>
+               
+            </div>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="Js/script.js"></script>
+    <script src="Js/employer.js"></script>
+</body>
+</html>
